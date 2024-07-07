@@ -4,3 +4,79 @@
     font-weight: normal;
     font-style: normal;
 }
+
+.main {
+    display: flex;
+}
+
+.banner {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../assets/background.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    padding: 16px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    height: 120px;
+}
+
+.logo-title {
+    font-family: "Nord";
+    color: #e7e7e7;
+    font-size: 80px;
+}
+
+.credits {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    color: #e7e7e7;
+    font-size: 0.9rem;
+}
+
+.form-container {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9fafb;
+}
+
+.form-info > p {
+    font-weight: bold;
+    padding: 4px 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    padding: 10px 36px;
+    background-color: #596d48;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 6px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #4b5c3e;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
