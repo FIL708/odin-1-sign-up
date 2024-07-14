@@ -6,6 +6,12 @@
         <title>Sign-up</title>
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <main class="main">
@@ -38,11 +44,12 @@
                 </div>
                 <form action="">
                     <fieldset>
-                        <div>
-                            <h3>Let's do this!</h3>
+                        <h3>Let's do this!</h3>
+                        <div class="form-wrapper">
                             <div class="input-container">
                                 <label for="first-name">first name</label>
                                 <input
+                                    class="input"
                                     type="text"
                                     id="first-name"
                                     name="first-name"
@@ -51,6 +58,7 @@
                             <div class="input-container">
                                 <label for="last-name">last name</label>
                                 <input
+                                    class="input"
                                     type="text"
                                     id="last-name"
                                     name="last-name"
@@ -58,32 +66,50 @@
                             </div>
                             <div class="input-container">
                                 <label for="email">email</label>
-                                <input type="text" id="email" name="email" />
+                                <input
+                                    class="input"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                />
                             </div>
                             <div class="input-container">
                                 <label for="phone">phone number</label>
-                                <input type="text" id="phone" name="phone" />
+                                <input
+                                    class="input"
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    pattern="^\+?[1-9]\d{1,14}$"
+                                    title="Please enter a valid phone number. E.g., +123456789 or 123456789"
+                                />
                             </div>
                             <div class="input-container">
                                 <label for="password">password</label>
                                 <input
-                                    type="text"
+                                    class="input"
+                                    type="password"
                                     id="password"
                                     name="password"
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+                                    title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one digit, and one special character."
                                 />
                             </div>
                             <div class="input-container">
                                 <label for="confirm">confirm password</label>
                                 <input
-                                    type="text"
+                                    class="input"
+                                    type="password"
                                     id="confirm"
                                     name="confirm"
+                                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+                                    title="Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one digit, and one special character."
                                 />
                             </div>
                         </div>
                     </fieldset>
                     <button type="submit" class="submit">Create account</button>
-                    <span>Already have an account? <a href="">Log in</a></span>
+                    <span class="signin-link">Already have an account? <a href="#">Log in</a></span>
                 </form>
             </section>
         </main>
